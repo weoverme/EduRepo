@@ -20,4 +20,16 @@ public class UserTest {
 		assertEquals("pass", this.user.getPassword());
 	}
 
+	@Test
+	public void test_user_loggedIn_is_true() {
+		this.user.setLoggedIn(true);
+		assertEquals(true, this.user.getLoggedIn());
+	}
+	
+	@Test
+	public void test_user_loggedIn_is_false() {
+		assertEquals(false, this.user.getLoggedIn());
+	}
+	
+	
 }
