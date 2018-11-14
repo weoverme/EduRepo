@@ -26,7 +26,6 @@ public class Portfolio {
 		} else {
 			this.os = null;
 		}
-		System.out.println(this.os);
 	}
 
 }
