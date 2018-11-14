@@ -1,5 +1,7 @@
 package entities;
 
+import factories.AccountFactory;
+
 public class User {
 	
 	private String username;
@@ -10,7 +12,9 @@ public class User {
 	public User(String username, String password) {
 		this.username = username;
 		this.password = password;
-		this.account = new Account(this);
+		
+		AccountFactory accFactory = new AccountFactory();
+		this.account = accFactory.createAccount(this);
 	}
 
 	public String getUsername() {
