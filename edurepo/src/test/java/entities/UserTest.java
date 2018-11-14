@@ -1,6 +1,6 @@
 package entities;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,6 +31,15 @@ public class UserTest {
 		assertEquals(false, this.user.getLoggedIn());
 	}
 	
+	@Test
+	public void test_user_has_an_account() {
+		assertNotNull(this.user.getAccount());
+	}
 	
+	@Test
+	public void test_user_can_access_account_details() {
+		Account acc = this.user.getAccount();
+		assertEquals("user", acc.getID());
+	}
 	
 }
